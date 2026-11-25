@@ -4,6 +4,19 @@
     box-sizing: border-box;
 }
 
+a {
+    color: #00f;
+
+}
+
+header,
+.grid,
+footer {
+    max-width: 900px;
+    margin: auto;
+
+}
+
 /* Class Selectors */
 
 .box {
@@ -15,22 +28,33 @@
 }
 
 nav {
-    background-color: darkblue;
-    padding: 10px;
+    background-color: #222;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 nav a {
-    color: white;
     display: block;
-    padding: 20px;
+    padding: 0.5rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+    /* shorthand for white */
 }
 
 h1 {
-    color: darkblue;
+    border-bottom: 1px solid #222;
+}
+
+h2 {
+    padding: center;
 }
 
 img {
-    width: 150px;
+    width: 200px;
     height: auto;
     border: 1px solid black;
     padding: 2px;
@@ -42,12 +66,15 @@ p {
 }
 
 main {
-    width: 840px;
+    grid-column: 2/3;
+    margin: 1rem;
 }
 
 aside {
-    width: 20em;
-    text-align: center;
+    width: 20rem;
+    position: relative;
+    grid-column: 1/2;
+    grid-row: 1/2;
 }
 
 aside img {
@@ -57,21 +84,38 @@ aside img {
 
 aside h2 {
     position: absolute;
-    top: 47px;
-    left: 150px;
+    top: 20px;
+    left: 60px;
+}
+
+ul {
+    list-style: none;
+    padding: 1rem;
+
 }
 
 main img {
     /* you most likely will have other CSS declarations here */
     float: right;
+    margin: 1rem;
+
 }
 
 p {
     padding: 0;
 }
 
+.grid {
+    display: grid;
+    align-items: center;
+}
+
 footer {
-    margin-top: 15px;
-    border-top: 1px solid #000;
-    text-align: center;
+    background-color: #222;
+    color: #fff;
+    /* margin: 2rem auto;*/
+    /*margin-top: 2rem;*/
+    /*margin-bottom: 2rem;*/
+    padding: 2rem;
+
 }
